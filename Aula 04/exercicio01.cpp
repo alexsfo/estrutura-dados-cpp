@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+
+
+int subtrair(int v1, int v2, int i){
+
+    return v1 - v2;
+}
+
+
 int main(){
 
 int vetA[10], vetB[10], vetC[10], i=0;
@@ -27,7 +35,12 @@ cout << endl;
 
 
 for (int i=0; i < 10; i++){
-*(pVetC + i) = *(pVetA + i)- *(pVetB + i);
+
+int a = *(pVetA + i);
+int b = *(pVetB + i);
+
+
+*(pVetC + i) = subtrair(a, b, i);
 
 }
 
@@ -41,6 +54,4 @@ for (int i=0; i < 10; i++){
 
     return 0;
 }
-
-
 
