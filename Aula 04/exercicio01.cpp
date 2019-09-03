@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+int vetA[10], vetB[10], vetC[10], i=0;
+
+int *pVetA = vetA;
+int *pVetB = vetB;
+int *pVetC = vetC;
+
+vetA[0] = 20;
+
+for (int i=0; i < 10; i++){
+    cout << "Informe o valor da " << i+1 << " posição do vetor A: ";
+    cin >> *(pVetA + i);
+}
+
+cout << endl;
+
+for (int i=0; i < 10; i++){
+    cout << "Informe o valor da " << i+1 << " posição do vetor B: ";
+    cin >> *(pVetB + i);
+}
+
+cout << endl;
+
+
+for (int i=0; i < 10; i++){
+*(pVetC + i) = *(pVetA + i)- *(pVetB + i);
+
+}
+
+cout << endl;
+
+
+for (int i=0; i < 10; i++){
+    cout << "Vetor C - Posição: " << i+1 << " = " << *(pVetC+ i) << endl;
+}
+
+
+    return 0;
+}
+
+
+
